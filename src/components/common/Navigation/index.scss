@@ -1,0 +1,135 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.navigation {
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+  background-color: color.$text-color;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__links {
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 855px) {
+      display: block;
+      text-align: left;
+      margin-left: 1.5rem;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+
+      &.-show {
+        height: 80vh;
+        overflow: scroll;
+      }
+    }
+
+    &.-submenu {
+      display: flex;
+      position: absolute;
+      padding: 0.5rem;
+      height: 0;
+      width: 200px;
+      opacity: 0;
+      overflow: hidden;
+      margin-top: 0.53rem;
+      flex-direction: column;
+      background-color: color.$text-color;
+      transition: height 1s ease-in-out;
+
+      &.-show-submenu {
+        height: 200px;
+        opacity: 1;
+        text-align: left;
+      }
+
+      @media (max-width: 855px) {
+        background-color: color.$text-color;
+
+        &.-show-submenu {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  &__link {
+    padding: 0.5rem 0;
+
+    &.-sublink {
+      position: relative;
+    }
+  }
+  &__nav-link {
+    color: color.$body-bg;
+    padding: 0.5rem 0.3rem;
+    position: relative;
+    transition: all 1.2s ease-in-out;
+    z-index: 100;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      transition: all 1s ease-in-out;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.6);
+      transition: all 1s ease-in-out;
+    }
+
+    &.-active::before {
+      width: 50%;
+    }
+    &.-active::after {
+      width: 50%;
+    }
+
+    &:hover {
+      text-shadow: 1px 1px 1px black;
+    }
+  }
+  &__icon {
+    font-size: 0.9rem;
+    margin: auto 0.4rem auto 0;
+    color: color.$body-bg;
+  }
+  &__submenu-icon {
+    margin-left: 0.3rem;
+    transition: all 0.3s ease-in-out;
+
+    &.-rotate {
+      transform: rotate(-90deg);
+    }
+  }
+  &__toggle-icon {
+    font-size: 2rem;
+    padding: 0.5rem 0 0.5rem 2rem;
+
+    color: color.$body-bg;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 855px) {
+      display: block;
+    }
+  }
+}

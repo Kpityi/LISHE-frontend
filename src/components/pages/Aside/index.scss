@@ -1,0 +1,35 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.aside {
+  &__links {
+    @media (max-width: 800px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+  }
+
+  &__link {
+    width: 100%;
+
+    @media (max-width: 800px) {
+      width: 30%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    box-shadow: 2px 2px 3px black;
+    border-radius: 5px;
+  }
+  &__title {
+    margin: 1rem 0;
+
+    @media (max-width: 800px) {
+      margin: 0 auto 0.6rem auto;
+      padding: 0;
+    }
+  }
+}

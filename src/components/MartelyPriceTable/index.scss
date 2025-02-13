@@ -1,0 +1,93 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.Martely-prices {
+  width: 90%;
+  margin: auto;
+
+  &__table,
+  &__th,
+  &__td,
+  &__tr {
+    border: 1px solid color.$text-color;
+    border-collapse: collapse;
+    padding: 0 0.3rem;
+    margin-top: 1rem;
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      font-size: 0.7rem;
+    }
+  }
+  &__table {
+    width: 100%;
+  }
+  &__th {
+    width: fit-content;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      font-size: 0.9rem;
+    }
+    &.text-left {
+      text-align: left;
+    }
+  }
+  &__td:nth-child(4) {
+    white-space: nowrap;
+  }
+  &__tr:nth-child(odd) {
+    background-color: color.$primary-light-color;
+  }
+
+  &__tr:nth-child(even) {
+    background-color: color.$primary-lighter-color;
+  }
+  &__tr {
+    &-space {
+      height: 2rem;
+    }
+    &.bg-black {
+      background-color: color.$text-color;
+      color: color.$body-bg;
+      &:first-child {
+        border-bottom: 2px solid color.$body-bg;
+      }
+    }
+  }
+  &__td {
+    font-weight: 600;
+  }
+
+  &__info {
+    padding: 1rem;
+    margin-right: 1rem;
+    text-align: justify;
+    font-weight: 500;
+
+    &-icon {
+      font-size: 0.7rem;
+      margin: 0 1rem 0 -2rem;
+
+      @media (max-width: breakpoint.$breakpoint-sm) {
+        font-size: 0.4rem;
+      }
+    }
+  }
+
+  &__download-container {
+    width: 90%;
+    display: block;
+    text-align: left;
+    margin: 0.5rem auto;
+  }
+
+  &__download {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  &__ul {
+    width: 90%;
+  }
+}

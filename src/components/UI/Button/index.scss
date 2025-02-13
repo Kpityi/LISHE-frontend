@@ -1,0 +1,32 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoints;
+
+.button {
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px color.$text-color;
+  font-weight: 600;
+  color: color.$body-bg;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  line-height: normal;
+  max-width: auto;
+  background-color: color.$primary-color;
+
+  cursor: pointer;
+  transition: ease-in-out 150ms;
+
+  &:hover {
+    filter: drop-shadow(5px 2px 4px black);
+  }
+
+  &:active {
+    transform: scale(95%);
+    filter: drop-shadow(-2px -2p 4px black);
+  }
+
+  &.-disabled {
+    pointer-events: none;
+    background-color: gray;
+  }
+}

@@ -1,12 +1,39 @@
 #root {
-  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+.app {
+  background: linear-gradient(180deg, #eff5d6, #f5f9e9);
+}
+.main-container {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto;
+  width: 95%;
+}
+.main {
+  background-color: rgba(255, 255, 255, 0.5);
+  flex: 4;
+  box-shadow: -2px 2px 6px black;
+  padding: 1rem;
+}
+.aside-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  flex: 1;
+  text-align: center;
+  box-shadow: -2px 2px 6px black;
+  padding: 1rem;
+  overflow: scroll;
+}
 
-
-
-
-
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column-reverse;
+  }
+  .main {
+    flex: 3;
+  }
+}

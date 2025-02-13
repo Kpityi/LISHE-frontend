@@ -1,0 +1,35 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.f-exam-page {
+  &__buttons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      flex-direction: column;
+    }
+  }
+  &.button {
+    margin: 0.2rem;
+  }
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0.4rem;
+  }
+
+  &__content {
+    margin: 1rem auto;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+
+    &.-active {
+      opacity: 1;
+      max-height: 10000px;
+    }
+  }
+}

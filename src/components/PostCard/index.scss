@@ -1,0 +1,56 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.post-card {
+  background-color: rgba(color.$color-white, 0.8);
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px color.$text-color;
+  width: 250px;
+  min-height: 350px;
+  padding-top: 0.5rem;
+
+  &__image-container {
+    position: relative;
+    width: 220px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 5%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 4px color.$text-color;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0.5rem auto;
+  }
+
+  &__content {
+    min-height: 5em;
+    height: 6em;
+    margin: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+
+  &__icon {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  &__date {
+    margin: 0;
+    padding: 0 0.2rem;
+    position: absolute;
+    text-shadow: 1px 1px 2px color.$body-bg;
+    font-weight: 500;
+    top: 5px;
+    left: 5px;
+    border-radius: 5px;
+    background-color: color.$secondary-color;
+    opacity: 80%;
+  }
+}

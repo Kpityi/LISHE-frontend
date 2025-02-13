@@ -1,0 +1,61 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.contact-page {
+  &__google-map {
+    width: 95%;
+    height: 400px;
+    margin: 1rem auto;
+    box-shadow: 2px 4px 4px color.$text-color;
+    border: 5px solid color.$color-white;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 800;
+  }
+
+  &__text {
+    text-align: left;
+
+    &-bold {
+      font-weight: 600;
+    }
+
+    &-center {
+      text-align: center;
+    }
+  }
+
+  &__hr {
+    opacity: 0.4;
+    margin-right: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__contact {
+    flex: 2;
+    border-right: 2px solid color.$color-grey-lightest;
+  }
+
+  &__open {
+    flex: 1;
+  }
+
+  &__table {
+    margin: 0 auto;
+  }
+  &__icon {
+    margin-right: 0.5rem;
+  }
+
+  &__td-day {
+    text-align: left;
+    padding-right: 0.5rem;
+  }
+}

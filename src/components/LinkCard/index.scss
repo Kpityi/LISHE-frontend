@@ -1,0 +1,38 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 180px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: color.$color-white;
+  padding: 0.5rem;
+  margin: 1rem;
+  box-shadow: 2px 4px 6px color.$text-color;
+
+  &__title,
+  &__description {
+    padding: 0.5rem;
+    border-bottom: 1px solid color.$color-grey-lightest;
+  }
+  &__description {
+    overflow: scroll;
+    height: 100%;
+  }
+
+  &:hover &__title {
+    background-color: color.$primary-color;
+    color: color.$body-bg;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__text {
+    &-title {
+      margin: 0.2rem;
+    }
+  }
+}

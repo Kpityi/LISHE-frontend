@@ -1,0 +1,95 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__pdf-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    overflow: hidden;
+    height: 1720px;
+
+    @media (max-width: breakpoint.$breakpoint-xxxl) {
+      height: 1300px;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-xl) {
+      height: 1100px;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-lg) {
+      height: 820px;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      height: 600px;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-xs) {
+      height: 500px;
+      width: 100%;
+    }
+  }
+
+  &__download-container {
+    width: 90%;
+    display: block;
+    text-align: left;
+    margin: 0.5rem;
+  }
+
+  &__download {
+    padding: 1rem;
+  }
+
+  &__page-indicators {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  &__page-indicator {
+    &.-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__document {
+    width: 800px;
+  }
+
+  &__pdf {
+    width: 300px;
+    scale: 200%;
+    margin-top: 27rem;
+
+    @media (max-width: breakpoint.$breakpoint-xxxl) {
+      scale: 158%;
+      margin-top: 15rem;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-xl) {
+      scale: 130%;
+      margin-top: 8rem;
+    }
+
+    @media (max-width: breakpoint.$breakpoint-lg) {
+      scale: 100%;
+      margin-top: 0;
+    }
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      scale: 70%;
+      margin-top: -8rem;
+    }
+    @media (max-width: breakpoint.$breakpoint-xs) {
+      scale: 60%;
+      margin-top: -10rem;
+    }
+  }
+}

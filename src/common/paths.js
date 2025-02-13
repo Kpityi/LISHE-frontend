@@ -1,0 +1,26 @@
+export const PATHS = {
+  root: '/',
+  home: '/home',
+  news: '/news',
+  prices: '/prices',
+  gallery: '/gallery',
+  about_us: '/about_us',
+  contact: '/contact',
+  post: '/post',
+  tender: '/tender',
+  informations: {
+    fishing_regulations: '/fishing_regulations',
+    fishing_exam: '/fishing_exam',
+    embankment_Access_permit: '/embankment_access_permit',
+    downloads: '/downloads',
+    tenders: '/tenders',
+    links: '/links',
+    our_statues: '/our_statues',
+    privacy_policy: '/privacy_policy',
+    cookies: '/cookies',
+    impressum: '/impressum',
+  },
+  params: {
+    postId: ':postId',
+  },
+};

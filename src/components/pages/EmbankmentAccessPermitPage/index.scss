@@ -1,0 +1,41 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.eap-page {
+  &__text {
+    text-align: justify;
+
+    &-bold {
+      font-weight: 600;
+      text-align: justify;
+    }
+
+    &-title {
+      font-weight: 600;
+      text-decoration: underline;
+      text-align: left;
+      margin-top: 2rem;
+    }
+
+    &-ul &-li {
+      list-style: inside;
+      list-style-type: none;
+      font-weight: 600;
+    }
+
+    &-li {
+      margin-bottom: 0.5rem;
+      text-align: justify;
+
+      &::before {
+        content: '- ';
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1rem;
+    font-style: italic;
+    text-decoration: underline;
+  }
+}

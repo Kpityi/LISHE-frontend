@@ -1,0 +1,16 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.price-page {
+  &__title {
+    margin: 1rem;
+  }
+  &__accordion-memu {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+  }
+}

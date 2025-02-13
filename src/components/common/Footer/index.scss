@@ -1,0 +1,79 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.footer {
+  background-color: color.$text-color;
+  color: color.$body-bg;
+  font-size: 0.7rem;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      display: block;
+      font-size: 0.8rem;
+    }
+  }
+  &__row:nth-child(2) {
+    background-color: rgba(color.$color-white-dark, 0.1);
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  &__content-box {
+    text-align: left;
+    flex: 1;
+
+    &.text-left {
+      text-align: right;
+      flex: 1;
+      margin-top: 1rem;
+    }
+    &.flex-2 {
+      flex: 2;
+      margin-top: 1rem;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  &__link,
+  &__text,
+  &__hr,
+  &__link-bottom {
+    opacity: 0.7;
+    color: color.$body-bg;
+  }
+
+  &__icon {
+    margin-right: 0.4rem;
+  }
+
+  &__link,
+  &__link-bottom {
+    color: color.$body-bg;
+
+    &::before {
+      content: '>';
+      margin-right: 0.4rem;
+    }
+  }
+
+  &__link-bottom::after {
+    content: '|';
+    margin: 0 0.2rem;
+  }
+
+  &__link-bottom {
+    text-align: right;
+  }
+}

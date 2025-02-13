@@ -1,0 +1,60 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.basic-prices {
+  &__table,
+  &__th,
+  &__td,
+  &__tr {
+    border: 1px solid color.$text-color;
+    border-collapse: collapse;
+    width: 90%;
+    padding: 0 0.3rem;
+    margin: auto;
+
+    @media (max-width: breakpoint.$breakpoint-sm) {
+      font-size: 0.7rem;
+    }
+  }
+
+  &__th {
+    &.text-left {
+      text-align: left;
+    }
+  }
+
+  &__tr:nth-child(odd) {
+    background-color: color.$primary-light-color;
+
+    &.bg-black {
+      background-color: color.$text-color;
+      color: color.$body-bg;
+    }
+  }
+
+  &__tr {
+    &-space {
+      height: 2rem;
+    }
+  }
+
+  &__tr:nth-child(even) {
+    background-color: color.$primary-lighter-color;
+  }
+
+  &__td {
+    font-weight: 600;
+  }
+
+  &__download-container {
+    width: 90%;
+    display: block;
+    text-align: left;
+    margin: 0.5rem auto;
+  }
+
+  &__download {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}

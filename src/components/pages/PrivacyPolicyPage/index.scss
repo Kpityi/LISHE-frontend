@@ -1,0 +1,25 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.pp-page {
+  &__title {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  &__text {
+    text-align: justify;
+
+    &-bold {
+      font-weight: 600;
+      text-align: justify;
+    }
+
+    &-title {
+      font-weight: 600;
+      text-decoration: underline;
+      text-align: left;
+      margin-top: 2rem;
+    }
+  }
+}

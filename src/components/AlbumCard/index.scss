@@ -1,0 +1,33 @@
+@use '../../styles/colors' as color;
+@use '../../styles/breakpoints' as breakpoint;
+
+.album-card {
+  margin: 1rem;
+  width: 200px;
+  background-color: color.$color-white;
+  border-radius: 10px;
+  box-shadow: 2px 4px 6px color.$color-black;
+  cursor: pointer;
+
+  &__title {
+    padding: 0.5rem;
+    font-weight: 600;
+  }
+
+  &__image-container {
+    width: 190px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0.5rem auto;
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    margin: 0.3rem;
+    padding-bottom: 0.6rem;
+  }
+}

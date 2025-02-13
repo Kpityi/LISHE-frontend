@@ -1,0 +1,38 @@
+@use '../../../styles/colors' as color;
+@use '../../../styles/breakpoints' as breakpoint;
+
+.home-page {
+  &__title {
+    margin-top: 2rem;
+  }
+
+  &__info-box {
+    background-color: rgba(color.$secondary-color, 0.8);
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px color.$color-black-light;
+  }
+
+  &__info-text {
+    margin: 0;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  &__text {
+    &-bold {
+      font-weight: 600;
+    }
+  }
+
+  &__important {
+    border-bottom: 2px solid color.$color-grey-lightest;
+  }
+
+  &__post-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
