@@ -24,7 +24,7 @@ import ContactPage from './components/pages/ContactPage';
 import ImpressumPage from './components/pages/ImpressumPage';
 import PrivacyPolicyPage from './components/pages/PrivacyPolicyPage';
 import CookiePage from './components/pages/CookiesPage';
-import { HelmetProvider } from 'react-helmet-async';
+
 import { useEffect } from 'react';
 
 function App() {

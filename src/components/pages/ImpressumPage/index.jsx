@@ -25,7 +25,7 @@ const ImpressumPage = () => {
         <strong>MOHOSZ kód:</strong> 061-06-27-1
       </p>
       <p className="impressum-page__text">
-        <strong>Képviselő</strong> Horváth Gusztáv
+        <strong>Képviselő:</strong> Horváth Gusztáv
       </p>
       <p className="impressum-page__text">
         <strong>E-mail:</strong> elnok@lishe.hu
@@ -38,19 +38,19 @@ const ImpressumPage = () => {
       </p>
       <p className="impressum-page__text-title">Tárhelyszolgáltató:</p>
       <p className="impressum-page__text">
-        <strong>Név:</strong>
+        <strong>Név:</strong> Profitárhely KFT.
       </p>
       <p className="impressum-page__text">
-        <strong>Székhely:</strong>
+        <strong>Székhely:</strong> 2030 Érd, Burkoló u. 1.
       </p>
       <p className="impressum-page__text">
-        <strong>Weboldal</strong>
+        <strong>Weboldal:</strong> https://profitarhely.hu
       </p>
       <p className="impressum-page__text">
-        <strong>E-mail</strong>
+        <strong>E-mail:</strong> ugyfelszolgalat@profitarhely.hu
       </p>
       <p className="impressum-page__text">
-        <strong>Telefon:</strong>
+        <strong>Telefon:</strong> +36 20 254 0866
       </p>
       <p className="impressum-page__text-title">Jogi nyilatkozat</p>
       <ul className="impressum-page__text-ul">

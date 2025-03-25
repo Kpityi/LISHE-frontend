@@ -24,7 +24,7 @@ import './index.scss';
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
-  //const [isOpen, setIsOpen] = useState(false);
+
   const createClassname = ({ isActive }) => classNames('navigation__nav-link', isActive && '-active');
 
   return (
